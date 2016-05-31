@@ -1,0 +1,46 @@
+{
+  "name": "undie-joi",
+  "version": "0.0.0",
+  "description": "Undescribe your described Joi schemas saved in a DB.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel --optimal runtime -d lib src",
+    "check": "npm-check -u",
+    "clean": "rm -rf lib || true",
+    "eslint": "eslint --ext .js --quiet ./index.js ./lib/* ./tests/* ./*.js",
+    "test": "lab tests/ -m 10000 -l -v -c -r console -o stdout -r console -o reports/coverage.txt -r html -o reports/coverage.html -r json -o reports/coverage.json",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Icehunter/undie-joi.git"
+  },
+  "keywords": [
+    "joi",
+    "undescribe",
+    "describe"
+  ],
+  "author": "Ryan Wilson <syndicated.life@gmail.com> (http://syndicated.life/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Icehunter/undie-joi/issues"
+  },
+  "homepage": "https://github.com/Icehunter/undie-joi#readme",
+  "dependencies": {
+    "joi": "^8.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "code": "^3.0.0",
+    "eslint": "^2.11.1",
+    "eslint-plugin-babel": "^3.2.0",
+    "lab": "^10.7.0",
+    "npm-check": "*"
+  }
+}

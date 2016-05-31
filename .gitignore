@@ -1,0 +1,10 @@
+.coverData/*
+*.log
+*.logs
+debug/*
+lib/*
+node_modules/*
+reports/*
+.coverrun
+
+.idea/*
